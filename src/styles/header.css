@@ -3,6 +3,7 @@ header {
   display: block;
   width: 100%;
   --text-border-radius: 0.8em;
+  --shadow-color: rgb(47, 0, 80);
 }
 
 #header-logo-img {
@@ -16,7 +17,7 @@ header {
   margin-bottom: -8px;
 
   /* Appearance - Glow */
-  filter: drop-shadow(0 0 30px rgb(47, 0, 80)) drop-shadow(0 0 50px black)
+  filter: drop-shadow(0 0 30px var(--shadow-color)) drop-shadow(0 0 50px black)
     drop-shadow(0 0 30px black);
 
   @media (max-width: 1500px) {
@@ -71,7 +72,6 @@ header {
     }
 
     &.el-back {
-      --shadow-color: rgb(47, 0, 80);
       box-shadow:
         0 0 5px var(--shadow-color),
         0 0 10px var(--shadow-color),
@@ -150,25 +150,24 @@ header {
 
     .el-back {
       --shadow-size-1: 0.8em;
-      --shadow-color-1: rgb(47, 0, 80);
       --shadow-size-2: 1em;
       --shadow-color-2: black;
       text-shadow:
-        0 0 var(--shadow-size-1) var(--shadow-color-1),
-        0 0 var(--shadow-size-1) var(--shadow-color-1),
-        0 0 var(--shadow-size-1) var(--shadow-color-1),
-        0 0 var(--shadow-size-1) var(--shadow-color-1),
-        0 0 var(--shadow-size-1) var(--shadow-color-1),
-        0 0 var(--shadow-size-1) var(--shadow-color-1),
-        0 0 var(--shadow-size-1) var(--shadow-color-1),
-        0 0 var(--shadow-size-1) var(--shadow-color-1),
-        0 0 var(--shadow-size-1) var(--shadow-color-1),
-        0 0 var(--shadow-size-1) var(--shadow-color-1),
-        0 0 var(--shadow-size-1) var(--shadow-color-1),
-        0 0 var(--shadow-size-1) var(--shadow-color-1),
-        0 0 var(--shadow-size-1) var(--shadow-color-1),
-        0 0 var(--shadow-size-1) var(--shadow-color-1),
-        0 0 var(--shadow-size-1) var(--shadow-color-1),
+        0 0 var(--shadow-size-1) var(--shadow-color),
+        0 0 var(--shadow-size-1) var(--shadow-color),
+        0 0 var(--shadow-size-1) var(--shadow-color),
+        0 0 var(--shadow-size-1) var(--shadow-color),
+        0 0 var(--shadow-size-1) var(--shadow-color),
+        0 0 var(--shadow-size-1) var(--shadow-color),
+        0 0 var(--shadow-size-1) var(--shadow-color),
+        0 0 var(--shadow-size-1) var(--shadow-color),
+        0 0 var(--shadow-size-1) var(--shadow-color),
+        0 0 var(--shadow-size-1) var(--shadow-color),
+        0 0 var(--shadow-size-1) var(--shadow-color),
+        0 0 var(--shadow-size-1) var(--shadow-color),
+        0 0 var(--shadow-size-1) var(--shadow-color),
+        0 0 var(--shadow-size-1) var(--shadow-color),
+        0 0 var(--shadow-size-1) var(--shadow-color),
         0 0 var(--shadow-size-2) var(--shadow-color-2),
         0 0 var(--shadow-size-2) var(--shadow-color-2),
         0 0 var(--shadow-size-2) var(--shadow-color-2),
@@ -246,7 +245,7 @@ header {
 
   #location {
     font-size: 1em;
-    transform: translateX(-0.2em); /* Ignore icon when centering, looks better*/
+    transform: translateX(-0.25em); /* Ignore icon when centering, looks better*/
   }
 
   .el-front {
@@ -261,40 +260,39 @@ header {
 
   .el-back {
     --shadow-size-1: 0.8em;
-    --shadow-color-1: rgb(47, 0, 80);
     --shadow-size-2: 1em;
     --shadow-color-2: black;
     text-shadow:
-      0 0 var(--shadow-size-1) var(--shadow-color-1),
-      0 0 var(--shadow-size-1) var(--shadow-color-1),
-      0 0 var(--shadow-size-1) var(--shadow-color-1),
-      0 0 var(--shadow-size-1) var(--shadow-color-1),
-      0 0 var(--shadow-size-1) var(--shadow-color-1),
-      0 0 var(--shadow-size-1) var(--shadow-color-1),
-      0 0 var(--shadow-size-1) var(--shadow-color-1),
-      0 0 var(--shadow-size-1) var(--shadow-color-1),
-      0 0 var(--shadow-size-1) var(--shadow-color-1),
-      0 0 var(--shadow-size-1) var(--shadow-color-1),
-      0 0 var(--shadow-size-1) var(--shadow-color-1),
-      0 0 var(--shadow-size-1) var(--shadow-color-1),
-      0 0 var(--shadow-size-1) var(--shadow-color-1),
-      0 0 var(--shadow-size-1) var(--shadow-color-1),
-      0 0 var(--shadow-size-1) var(--shadow-color-1),
+      0 0 var(--shadow-size-1) var(--shadow-color),
+      0 0 var(--shadow-size-1) var(--shadow-color),
+      0 0 var(--shadow-size-1) var(--shadow-color),
+      0 0 var(--shadow-size-1) var(--shadow-color),
+      0 0 var(--shadow-size-1) var(--shadow-color),
+      0 0 var(--shadow-size-1) var(--shadow-color),
+      0 0 var(--shadow-size-1) var(--shadow-color),
+      0 0 var(--shadow-size-1) var(--shadow-color),
+      0 0 var(--shadow-size-1) var(--shadow-color),
+      0 0 var(--shadow-size-1) var(--shadow-color),
+      0 0 var(--shadow-size-1) var(--shadow-color),
+      0 0 var(--shadow-size-1) var(--shadow-color),
+      0 0 var(--shadow-size-1) var(--shadow-color),
+      0 0 var(--shadow-size-1) var(--shadow-color),
+      0 0 var(--shadow-size-1) var(--shadow-color),
       0 0 var(--shadow-size-2) var(--shadow-color-2),
       0 0 var(--shadow-size-2) var(--shadow-color-2),
       0 0 var(--shadow-size-2) var(--shadow-color-2),
       0 0 var(--shadow-size-2) var(--shadow-color-2),
       0 0 var(--shadow-size-2) var(--shadow-color-2);
 
-    .icon {
-      color: LightSkyBlue !important;
-      --shadow-size-1: 0.2em;
-      filter: drop-shadow(0 0 var(--shadow-size-1) var(--shadow-color-1))
-        drop-shadow(0 0 var(--shadow-size-1) var(--shadow-color-1))
-        drop-shadow(0 0 var(--shadow-size-1) var(--shadow-color-1))
-        drop-shadow(0 0 var(--shadow-size-1) var(--shadow-color-1))
-        drop-shadow(0 0 var(--shadow-size-1) var(--shadow-color-1));
-      transform: translateZ(0);
+    .icon-wrapper {
+      background-color: var(--shadow-color);
+      border-radius: 20px;
+      box-shadow:
+        0 0 5px var(--shadow-color),
+        0 0 10px var(--shadow-color),
+        0 0 10px var(--shadow-color),
+        0 0 10px var(--shadow-color),
+        0 0 10px var(--shadow-color);
     }
   }
 }
