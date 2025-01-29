@@ -41,10 +41,8 @@
       0 0 10px var(--shadow-color),
       0 0 15px var(--shadow-color);
   }
-}
 
-@media (max-width: 1500px) {
-  .sc-player {
+  @media (max-width: 1500px) {
     margin-top: -0.4em;
   }
 }

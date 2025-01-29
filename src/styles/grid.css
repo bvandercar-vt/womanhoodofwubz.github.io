@@ -4,10 +4,8 @@
   grid-template-columns: repeat(auto-fit, minmax(min(280px, 40%), 1fr));
   gap: var(--gap);
   justify-content: center;
-}
 
-@media (max-width: 800px) {
-  .grid {
+  @media (max-width: 800px) {
     --gap: 0.5em;
     margin: 0 var(--gap);
   }
