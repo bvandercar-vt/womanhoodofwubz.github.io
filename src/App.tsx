@@ -56,38 +56,41 @@ export const App = () => {
 
   return (
     <>
-      <Header
-        scrollToGrid={() =>
-          document.getElementById(GRID_ID)?.scrollIntoView({ behavior: 'smooth' })
-        }
-      />
-      <div id="main-body">
-        <SoundcloudPlayer
-          href="https://soundcloud.com/marisa-kerstanski/sets/womanhood-of-wubz-vol-3"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1922773207&color=%23ff00d0&auto_play=true&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"
-          title="Womanhood Of Wubz - Volume 3"
+      <div className="background-image" />
+      <div className="content">
+        <Header
+          scrollToGrid={() =>
+            document.getElementById(GRID_ID)?.scrollIntoView({ behavior: 'smooth' })
+          }
         />
-        <Grid id={GRID_ID}>
-          {data &&
-            data.items.map((item) => {
-              const { image, title, subtitle, number, type, price, soldOut } = item.fields
+        <div id="main-body">
+          <SoundcloudPlayer
+            href="https://soundcloud.com/marisa-kerstanski/sets/womanhood-of-wubz-vol-3"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1922773207&color=%23ff00d0&auto_play=true&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"
+            title="Womanhood Of Wubz - Volume 3"
+          />
+          <Grid id={GRID_ID}>
+            {data &&
+              data.items.map((item) => {
+                const { image, title, subtitle, number, type, price, soldOut } = item.fields
 
-              const url = (image as contentful.Asset)?.fields?.file?.url
-              if (!url || !isString(url)) return null
+                const url = (image as contentful.Asset)?.fields?.file?.url
+                if (!url || !isString(url)) return null
 
-              return (
-                <GridImage
-                  src={url}
-                  title={title}
-                  type={type}
-                  subtitle={subtitle}
-                  number={number}
-                  price={price}
-                  soldOut={soldOut}
-                />
-              )
-            })}
-        </Grid>
+                return (
+                  <GridImage
+                    src={url}
+                    title={title}
+                    type={type}
+                    subtitle={subtitle}
+                    number={number}
+                    price={price}
+                    soldOut={soldOut}
+                  />
+                )
+              })}
+          </Grid>
+        </div>
       </div>
     </>
   )
