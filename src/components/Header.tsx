@@ -25,7 +25,9 @@ export const Header = ({
         <div id="bio">
           <DoubleElement>
             <p id="location">
-              <FontAwesomeIcon icon={faLocationDot} size="sm" />
+              <span className="icon">
+                <FontAwesomeIcon icon={faLocationDot} size="sm" />
+              </span>
               Denver, CO
             </p>
             <p>
